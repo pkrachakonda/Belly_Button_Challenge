@@ -72,18 +72,18 @@ d3.json(Bio_url).then(function(data) {
 
         for (let i = 0; i < fields.length; i++) {
             const field = fields[i];
-            panelBody.append("p").style("font-size", "14px").text(`${field}: ${metadata[Bacteria_ID][field]}`);
+            panelBody.append("p").style("font-size", "12px").text(`${field}: ${metadata[Bacteria_ID][field]}`);
         };
 
     }
 
     function buildGaugeBar(Bacteria_ID){
-        let washingFrequency = metadata[Bacteria_ID].wfreq
+        let Weekly_Washing_Frequency = metadata[Bacteria_ID].wfreq
 
         let data = [
             {
                 domain: { x: [0, 1], y: [0, 1] },
-                value: washingFrequency,
+                value: Weekly_Washing_Frequency,
                 title: { text: "Belly Button Washing Frequency " +
                         "Scrubs per week" },
                 type: "indicator",
